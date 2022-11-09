@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="css/oblig.css" /> -->
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <h1>2- Ingreso a la aplicación</h1>
+    <input type="text" id="txtUsuario" placeholder="Nombre de usuario:" />
+    <input type="password" id="txtContraseña" placeholder="Contraseña:" />
+    <input type="button" class="boton" id="btnIngreso" value="Iniciar sesión" />
+  </div>
+
+  <div>
+    <h1>3- Crear nueva solicitud de carga</h1>
+    <label for="slcTipoCarga">Indique el tipo de carga:</label>
+    <select id="slcTipoCarga">
+      <option value="xx">Seleccionar</option>
+      <option value="CG">general</option>
+      <option value="CR">refrigerada</option>
+      <option value="CP">peligrosa</option>
+    </select> <br>
+    <input type="text" id="txtOrigen" placeholder="Puerto de origen:"/>
+    <br />
+    <input type="number" id="txtCantidadCont" placeholder="Cantidad de contenedores:">
+    <br />
+    <input type="text" id="txtDescripcion" placeholder="Descripción de mercadería:">
+    <br>
+    <input type="button" id="btnIngresoSolicitud" value="Ingresar solicitud">
+  </div>
+
+  <br>
+  <div>
+    <h1>4- Consultar y/o cancelar solicitudes pendientes</h1>
+    <h2>Filtrar resultados:</h2>
+    <input type="text" id="txtBusquedaDescripcion" placeholder="Descripción:" /> <br />
+    <input type="button" class="boton" id="btnFiltrarBusqueda" value="Filtrar búsqueda" />
+
+    <p id="pPendientes">Listado de solicitudes pendientes:</p>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Tipo de carga</th>
+          <th>Origen</th>
+          <th>Cantidad de contenedores</th>
+          <th>Descripción</th>
+          <th>ID</th>
+          <th>Estado</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tblPendientesImp"></tbody>
+    </table>
+  </div>
+
+  <br />
+
+  <div>
+    <h1>5- Información estadística</h1>
+
+    <h2>Porcentaje de cancelaciones:</h2>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>CANCELADAS</th>
+          <th>CONFIRMADAS</th>
+          <th>PENDIENTES</th>
+          <th>IGNORADAS</th>
+          <th>PORCENTAJE CANCELADAS:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>6</th>
+          <th>30</th>
+          <th>5</th>
+          <th>2</th>
+          <th>14%</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Calendario de llegadas a Montevideo:</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Tipo de Carga</th>
+          <th>Carga</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>15/1/23</th>
+          <th>Peligrosa</th>
+          <th>Juguetes chinos levemente tóxicos</th>
+        </tr>
+        <tr>
+          <th>26/1/23</th>
+          <th>Refrigerada</th>
+          <th>Cerveza</th>
+        </tr>
+        <tr>
+          <th>6/2/23</th>
+          <th>General</th>
+          <th>Álbums del mundial</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Porcentajes de participacion de lineas de carga</h2>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Empresa</th>
+          <th>Porcentaje:</th>
+          <th>Cargas totales:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Barquitos Unidos</th>
+          <th>50%</th>
+          <th>25</th>
+        </tr>
+        <tr>
+          <th>Atlantic Pirate Association</th>
+          <th>30%</th>
+          <th>15</th>
+        </tr>
+        <tr>
+          <th>Nomela Containers</th>
+          <th>20%</th>
+          <th>10</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+<script src="js/codigo.js"></script>
+</html>
